@@ -1,0 +1,25 @@
+syntax = "proto3";
+package proto_kafka;
+
+message ClientConfigRequest {
+  string clientId = 1;
+  string bootstrapServers = 2;
+  //security info here as well
+}
+
+message MetadataResponse {
+  repeated Topic topic = 1;
+}
+
+message Topic {
+  string name = 1;
+  repeated Partition partition = 2;
+}
+
+message Partition {
+  int32 id = 1;
+  int32 leader = 2;
+  repeated int32 replicas = 3;
+  int32 isr = 4;
+}
+
