@@ -12,14 +12,13 @@ mod model;
 
 fn main() {
     setup_logger(true, Some("info"));
-    log::info!("Hello, world!");
 
     let config_request = ClientConfigRequest {
         client_id: "1231lkjdsf".to_string(),
         bootstrap_servers: "localhost:9092".to_string()
     };
 
-    let client_config = config_utils::create_config(&config_request);
+    let client_config = config_utils::nv_create_config(&config_request);
     log::info!("Client Config: {:?}", client_config);
 
 }
