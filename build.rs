@@ -13,7 +13,7 @@ fn main() -> std::io::Result<()> {
     // prost_build::compile_protos(&["src/model.proto"], &["src/"])?;
 
     // Specify your desired output directory here
-    let dest_path = Path::new("src/").join("generated");
+    let dest_path = Path::new("src/").join("model");
     fs::create_dir_all(&dest_path)?;
 
     // Copy the generated files to your desired directory

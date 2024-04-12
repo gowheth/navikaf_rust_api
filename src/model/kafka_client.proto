@@ -1,5 +1,5 @@
 syntax = "proto3";
-package proto_kafka;
+package kafka_client;
 
 message ClientConfigRequest {
   string clientId = 1;
